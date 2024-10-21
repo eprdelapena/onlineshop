@@ -26,75 +26,90 @@ const Header: React.FC<IHeader> = ({ children }) => {
 
   return (
     <div className='w-full bg-white min-h-screen'>
-      <div className='flex flex-row'>
-        <div className='w-[100%] lg:w-[50%] flex flex-col'>
-          <div className='w-full flex flex-row p-2 pt-4 items-center justify-between'>
-            <div className='lg:pr-0 pl-5'>
-              <a href="/">
-                <Image 
-                  alt={"bones icon"}
-                  width={20}
-                  height={20}
-                  src={bonesicon}
-                />
-              </a>
-            </div>
-            <div className='flex items-center gap-x-5 lg:pr-0 pr-5'>
-              <div className="flex items-center border border-gray-500 rounded-lg">
-                <input
-                  type="text"
-                  className="pl-1 text-black border-none focus:outline-none"
-                  placeholder="Search..."
-                />
-                <button className="p-2 bg-black text-white rounded-r">
-                  <FaSearch />
-                </button>
-              </div>
-              <div className="hidden lg:flex items-center gap-x-5">
-                {links.map((item, index) => (
-                  <div key={index} className="text-center group relative">
+ 
+ <div className='w-full flex flex-row px-5 bg-pink-50 items-center md:gap-x-0 justify-center md:justify-between'>
+    <div className='h-[5em] text-pink-500 flex text-lg items-center justify-center w-[6em]'>
+        <a href="/"> Shopkeen </a>
+    </div>
+    <div className='flex items-center   lg:pr-0'>
+        <div className="flex items-center bg-white border border-gray-500 rounded-lg">
+            <input
+                type="text"
+                className="pl-2 pr-1 w-[10em] md:w-[20em] bg-white text-black border-none focus:outline-none"
+                placeholder="Search..."
+            />
+            <button className="p-2 bg-black text-white rounded-r">
+                <FaSearch />
+            </button>
+        </div>
+        <button onClick={toggleMenu} className="lg:hidden">
+            {isMenuOpen ? <FaTimes className='text-black' /> : <FaBars className='text-black ml-5' />}
+        </button>
+    </div>
+    <div className="hidden lg:flex items-center gap-x-5">
+            {links.map((item, index) => (
+                <div key={index} className="text-center group relative">
                     <Link
-                      target='_self'
-                      href={item.path}
-                      className="text-black group-hover:text-black/40 cursor-pointer transition duration-300 text-[1.1em] font-light"
-                      style={{ fontFamily: 'sans-serif' }}
+                        target='_self'
+                        href={item.path}
+                        className="text-black group-hover:text-black/70 cursor-pointer transition duration-300 text-[1.1em] font-light"
+                        style={{ fontFamily: 'sans-serif' }}
                     >
-                      {item.stringData}
+                        {item.stringData}
                     </Link>
-                    <div className="w-1 h-1 bg-black/0 group-hover:bg-black/100 transition duration-300 absolute rounded-full top-[125%] mx-auto left-[50%]"></div>
-                  </div>
-                ))}
-              </div>
-              <div className="hidden lg:flex gap-x-5">
-                <Link target='_self' href={""} className="text-black group-hover:text-black/40 cursor-pointer transition duration-300 text-[1.1em] font-light" style={{ fontFamily: 'sans-serif' }}>
-                  Login
-                </Link>
-                <Link target='_self' href={""} className="text-black group-hover:text-black/40 cursor-pointer transition duration-300 text-[1.1em] font-light" style={{ fontFamily: 'sans-serif' }}>
-                  Sign-up
-                </Link>
-              </div>
-              <button onClick={toggleMenu} className="lg:hidden p-2">
-                {isMenuOpen ? <FaTimes className='text-black' /> : <FaBars className='text-black'/>}
-              </button>
-            </div>
-          </div>
+                    <div className="w-1 h-1 bg-black/0 group-hover:bg-black/100 transition duration-300 absolute rounded-full top-[125%] mx-auto left-[50%] transform -translate-x-1/2"></div>
+                </div>
+            ))}
+                        <Link target='_self' href={""} className="text-black group-hover:text-black/70 cursor-pointer transition duration-300 text-[1.1em] font-light" style={{ fontFamily: 'sans-serif' }}>
+                Login
+            </Link>
+            <Link target='_self' href={""} className="text-black group-hover:text-black/70 cursor-pointer transition duration-300 text-[1.1em] font-light" style={{ fontFamily: 'sans-serif' }}>
+                Sign-up
+            </Link>
+        </div>
+
+</div>
+
+
+
+
+      <div className='flex flex-row '>
+        
+        <div className={`w-[100%] bg-pink-50 h-screen ${pathname === "/contact" ? "lg:w-[100%]": `lg:w-[50%]`} flex flex-col`}>
+
           {children}
         </div>
 
-        <div className='hidden lg:flex items-center justify-center w-[50%]'>
-          <div className={`${pathname === "/studio" ? "w-[80%]" : "w-[60%]" } flex flex-col`}>
+        <div className={`hidden lg:flex items-start justify-center bg-pink-50 ${pathname === "/contact" ? "hidden" : "w-[50%]"}`}>
+          {
+            pathname === "/" && <div className='w-full flex flex-col'>
+              <Header_base />
+            </div>
+          }
+            {
+            pathname === "/studio" && <div className='w-[90%] flex flex-col'>
+              <ImageCarousel/> 
+            </div>
+          }
+
+{
+            pathname === "/about" && <div className='w-full flex flex-col'>
+              <Header_base />
+            </div>
+          }
+          {/* <div className={`${pathname === "/studio" ? "w-[90%]" : "w-full" } flex flex-col`}>
 
             {pathname === "/studio" ? <ImageCarousel/> : <Header_base />}
          
             
-          </div>
+          </div> */}
         </div>
       </div>
 
       {/* Mobile Menu */}
       <div className={`fixed top-0 right-0 h-full w-64 bg-white p-4 transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="flex justify-end">
-          <button onClick={toggleMenu}>
+          <button className="ml-10 md:ml-0"  onClick={toggleMenu}>
             <FaTimes className='text-black' />
           </button>
         </div>

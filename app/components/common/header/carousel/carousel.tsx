@@ -24,7 +24,7 @@ const ImageCarousel = () => {
   return (
     <>
     <h1 className='text-black text-[1.5em] text-center'>Hottest trends</h1>
-        <div className="relative w-full  h-[400px] overflow-hidden">
+        <div className="relative w-full  h-[40em] overflow-hidden">
       {images.map((src, index) => (
         <div
           key={index}

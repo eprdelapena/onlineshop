@@ -26,7 +26,9 @@ const Page = () => {
   };
 
   return (
-    <div className='flex flex-col'>
+    <>
+    <div className='flex flex-col md:flex-row w-full'>
+    <div className='flex flex-col w-[100%] md:w-[50%]'>
       <div className='text-[1.8em] font-light w-full text-black pl-5 py-8' style={{ fontFamily: 'sans-serif' }}>
         Contact us
       </div>
@@ -59,6 +61,31 @@ const Page = () => {
         </form>
       </div>
     </div>
+
+    <div className='flex flex-col w-full md:w-1/2 h-screen overflow-y-auto '>
+
+      <div className="flex items-center p-4 border-b">
+        {/* <img
+          src={comment.userImage}
+          alt={comment.userName}
+          className="w-12 h-12 rounded-full mr-4"
+        /> */}
+        <div>
+          <h3 className="text-lg font-semibold text-gray-800">asdfasdf</h3>
+          <p className="text-sm text-gray-500">asdfasdf</p>
+        </div>
+      </div>
+
+      
+
+
+    </div>
+    </div>
+
+
+    
+    </>
+
   );
 };
 

@@ -13,7 +13,7 @@ const Page = () => {
 
 
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col '>
       <div className="border border-gray-300 mt-5 px-4 pb-4 pt-2 ml-5 rounded-lg bg-gradient-to-r from-green-400 to-pink-400">
         <h2 className="text-lg text-black mb-4">Categories</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
@@ -107,30 +107,41 @@ const Page = () => {
   <div className='flex-1 flex flex-col shrink'>
     <div className='text-black text-[1em]'>Top</div>
     <div className='flex flex-col md:flex-row gap-x-2 w-full'>
-      <div className="border bg-gradient-to-r from-green-400 to-pink-400 border-gray-200 group hover:bg-yellow-500/50 transition cursor-pointer rounded-md p-3 flex flex-col justify-between hover:shadow-md bg-transparent">
-        <Image
-          src={`https://cdn2.iconfinder.com/data/icons/business-dual-color-glyph-set-9/128/suit-512.png`}
-          alt="Converse"
-          width={120}
-          height={120}
-          className="w-full bg-white object-cover mb-2 rounded-md"
-          unoptimized
-        />
-        <p className="text-black text-[1em] text-center">Converse</p>
-      </div>
-      <div className="border border-gray-200 bg-gradient-to-r from-green-400 to-pink-400 group hover:bg-yellow-500/50 transition cursor-pointer rounded-md p-3 flex flex-col justify-between hover:shadow-md bg-transparent">
-        <Image
-          src={`https://c8.alamy.com/comp/2E3KYP3/clothes-and-accessories-fashion-icon-set-men-and-women-clothes-and-footware-casual-seasonal-clothes-boutique-assortment-showroom-personal-wardrob-2E3KYP3.jpg`}
-          alt="Dress"
-          width={120}
-          height={120}
-          className="w-full bg-white object-cover mb-2 rounded-md"
-          unoptimized
-        />
-        <p className="text-black text-[1em] text-center">Dress</p>
-      </div>
+    <div className="border bg-gradient-to-r from-green-400 to-pink-400 border-gray-200 group hover:bg-yellow-500/50 transition cursor-pointer rounded-md p-3 flex flex-col justify-between hover:shadow-md bg-transparent">
+          <Image
+            src={`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjRjawheyKIUGbGQwq-8sjV_OqKSwJzh3Q0g&s`}
+            alt="Converse"
+            width={120}
+            height={120}
+            className="w-full bg-white object-cover mb-2 rounded-md"
+            unoptimized
+          />
+          <p className="text-black text-[1em] text-center">Converse</p>
+        </div>
+        <div className="border border-gray-200 bg-gradient-to-r from-green-400 to-pink-400 group hover:bg-yellow-500/50 transition cursor-pointer rounded-md p-3 flex flex-col justify-between hover:shadow-md bg-transparent">
+          <Image
+            src={`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVNcpJ2ZEFk_CP8fETJ-RVV2NYSeAok3oNwg&s`}
+            alt="Dress"
+            width={120}
+            height={120}
+            className="w-full bg-white object-cover mb-2 rounded-md"
+            unoptimized
+          />
+          <p className="text-black text-[1em] text-center">Dress</p>
+        </div>
     </div>
   </div>
+</div>
+
+<div className='w-full pl-5 h-[14em] '>
+<Image
+            src={`https://img.freepik.com/free-vector/pink-opening-soon-background-realistic-design_52683-20484.jpg`}
+            alt="Converse"
+            width={120}
+            height={120}
+            className="w-full h-full bg-white "
+            unoptimized
+          />
 </div>
 
       {/* <div className='text-[1em] font-light text-black pl-5 md:w-[75%]' style={{ fontFamily: 'sans-serif' }}>

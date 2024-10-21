@@ -5,23 +5,17 @@ import bonesghost from "@/public/images/bonesghost.webp"
 const Header_base = () => {
   return (
     <>
-        <div className='w-full h-[28em] flex flex-col items-center justify-center'>
-            <Image 
-                alt={"bones text"}
-                width={120}
-                height={120}
-                src={bonestext}
-                className='w-full h-full'
-            />
-            </div>
+
             <div className='flex items-center justify-center'>
-            <div className='w-fit h-[15em] flex flex-col items-center justify-center'>
+            <div className='w-full  h-screen flex flex-col items-center justify-center'>
+
                 <Image 
                 alt={"bones ghost"}
                 width={120}
                 height={120}
-                src={bonesghost}
+                src={`https://static.vecteezy.com/system/resources/previews/030/465/577/large_2x/clothes-hang-in-a-modern-boutique-reflecting-contemporary-fashion-at-the-clothing-shop-vertical-mobile-wallpaper-ai-generated-free-photo.jpg`}
                 className='w-full h-full'
+                unoptimized
                 />
             </div>
         </div>

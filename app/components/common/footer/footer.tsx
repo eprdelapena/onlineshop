@@ -5,15 +5,16 @@ import Image from 'next/image'
 const Footer = () => {
   return (
     <>
-        <div className='w-full h-[8em]'>
+        {/* <div className='w-[25em] bg-red-500 h-[25em]'>
             <Image
               alt={"bones text"}
               width={120}
               height={120}
               className="w-full h-full"
-              src={bonescorporation}
+              src={`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgGMOcToG8jDPrICNFgjHQ_8iR3tOyaxfnKw&s`}
+              unoptimized
             />
-        </div>
+        </div> */}
     </>
   )
 }
