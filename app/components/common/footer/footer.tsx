@@ -1,7 +1,4 @@
 import React from 'react'
-import bonescorporation from "@/public/images/bonescorporation.svg"
-import Image from 'next/image'
-
 const Footer = () => {
   return (
     <>

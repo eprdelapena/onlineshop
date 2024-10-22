@@ -1,9 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import bonesicon from "@/public/images/bonesicon.svg";
 import { FaSearch, FaBars, FaTimes } from 'react-icons/fa';
-import Image from 'next/image';
 import { IHeader } from '@/app/models/interface';
 import { usePathname } from 'next/navigation';
 import Header_base from '../../routes/base/header_base';

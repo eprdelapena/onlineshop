@@ -1,7 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import bonestext from "@/public/images/bonestext.svg"
-import bonesghost from "@/public/images/bonesghost.webp"
 const Header_base = () => {
   return (
     <>

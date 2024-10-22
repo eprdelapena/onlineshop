@@ -1,10 +1,9 @@
 import React from 'react';
-import Footer from './components/common/footer/footer';
 
 const Page = () => {
   return (
     <>
-      <div className='w-[75%] flex flex-col px-8 items-center justify-between bg-pink-50 w-full'>
+      <div className='flex flex-col px-8 items-center justify-between bg-pink-50 w-full'>
         <div className='text-[1.8em] font-light w-full text-black pl-5 py-8' style={{ fontFamily: 'sans-serif' }}>
           Welcome to ShopKeen!
         </div>
@@ -18,7 +17,7 @@ const Page = () => {
         <div className='w-[16em] items-center flex h-[2.3em] text-white bg-pink-600 rounded-full relative'>
           <div className='w-[0.5em] ml-2 mr-2 animate-pulse h-[0.5em] rounded-full bg-green-500'></div>
           <p className='text-white'>Currently Available</p>
-          <div className='flex items-center justify-center border-white border-[1px] cursor-pointer border-solid w-[5em] group hover:bg-pink-600 transition h-[1.8em] bg-white left-[67%] top-[10%] bg-green-500 rounded-full absolute'>
+          <div className='flex items-center justify-center border-white border-[1px] cursor-pointer border-solid w-[5em] group hover:bg-pink-600 transition h-[1.8em]  left-[67%] top-[10%] bg-green-500 rounded-full absolute'>
             <p className="text-black text-[0.9em] group-hover:text-white" style={{ fontFamily: 'sans-serif' }}>Book now</p>
           </div>
         </div>
@@ -37,7 +36,7 @@ const Page = () => {
           <li className="flex items-start space-x-2">
             <span role="img" aria-label="shopping bag" className="text-pink-500">🛍️</span>
             <div>
-              <strong className="text-pink-600">Diverse Selection:</strong> Whether you're looking for trendy apparel or the latest gadgets, we have something for everyone.
+              <strong className="text-pink-600">Diverse Selection:</strong> Whether you&apos;re looking for trendy apparel or the latest gadgets, we have something for everyone.
             </div>
           </li>
           <li className="flex items-start space-x-2">
