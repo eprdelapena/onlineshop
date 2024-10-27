@@ -36,25 +36,22 @@ const Page = () => {
           <li className="flex items-start space-x-2">
             <span role="img" aria-label="shopping bag" className="text-pink-500">🛍️</span>
             <div>
-              <strong className="text-pink-600">Diverse Selection:</strong> Whether you&apos;re looking for trendy apparel or the latest gadgets, we have something for everyone.
+              <strong className="text-pink-600">Diverse Selection:</strong> <p className='text-black'>Whether you&apos;re looking for trendy apparel or the latest gadgets, we have something for everyone.</p>
             </div>
           </li>
           <li className="flex items-start space-x-2">
             <span role="img" aria-label="handshake" className="text-pink-500">🤝</span>
             <div>
-              <strong className="text-pink-600">Customer-Centric:</strong> Your satisfaction is our top priority. Our dedicated support team is here to help you with any questions or concerns.
+              <strong className="text-pink-600">Customer-Centric:</strong> <p className='text-black'>Your satisfaction is our top priority. Our dedicated support team is here to help you with any questions or concerns.</p>
             </div>
           </li>
           <li className="flex items-start space-x-2">
             <span role="img" aria-label="globe" className="text-pink-500">🌐</span>
             <div>
-              <strong className="text-pink-600">Easy Navigation:</strong> Our user-friendly website makes finding what you need a breeze.
+              <strong className="text-pink-600">Easy Navigation:</strong> <p className='text-black'>Our user-friendly website makes finding what you need a breeze.</p>
             </div>
           </li>
         </ul>
-        <p className="">
-          Join our community of savvy shoppers today and discover great deals, exclusive offers, and new arrivals! Start your shopping journey with ShopKeen, where keen minds find the best deals. Happy shopping!
-        </p>
       </div>
     </>
   );
