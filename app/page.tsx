@@ -30,7 +30,7 @@ const Page = () => {
           <li className="flex items-start space-x-2">
             <span role="img" aria-label="star" className="text-pink-500">🌟</span>
             <div>
-              <strong className="text-pink-600">Quality Assurance:</strong> We handpick every item to ensure you receive only the best.
+              <strong className="text-pink-600">Quality Assurance:</strong> <p className='text-black'>We handpick every item to ensure you receive only the best.</p> 
             </div>
           </li>
           <li className="flex items-start space-x-2">
